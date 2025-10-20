@@ -81,3 +81,5 @@ FROM
   reports AS r
 RIGHT OUTER JOIN people AS p ON p.person_id = r.person_id
 WHERE content IS NULL;
+
+
