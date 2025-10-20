@@ -78,8 +78,6 @@ INNER JOIN
 SELECT
   p.name,r.content
 FROM
-  reports AS r
-RIGHT OUTER JOIN people AS p ON p.person_id = r.person_id
+  people AS p
+LEFT OUTER JOIN reports AS r ON p.person_id = r.person_id
 WHERE content IS NULL;
-
-
