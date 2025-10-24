@@ -52,8 +52,11 @@ UPDATE people SET department_id = 1 WHERE person_id = 6;
 
 SELECT name,age FROM people WHERE gender = 1 ORDER BY age DESC;
 
-department_idカラムの値が1のcreated_atカラムを基準に
-peopleテーブルの中のnameとemailとageレコードを取得する
+
+peopleテーブルから
+department_idカラムの値が1のレコードを取得し、
+created_atカラムの昇順にnameとemailとageカラムを表示
+
 
 SELECT
   name
