@@ -52,8 +52,11 @@ UPDATE people SET department_id = 1 WHERE person_id = 6;
 
 SELECT name,age FROM people WHERE gender = 1 ORDER BY age DESC;
 
-department_idカラムの値が1のcreated_atレコードを昇順に並べつつ、
-peopleテーブルの中のnameとemailとageレコードを取得する
+
+peopleテーブルから
+department_idカラムの値が1のレコードを取得し、
+created_atカラムの昇順にnameとemailとageカラムを表示
+
 
 SELECT
   name
@@ -78,6 +81,6 @@ INNER JOIN
 SELECT
   p.name,r.content
 FROM
-  reports AS r
-RIGHT OUTER JOIN people AS p ON p.person_id = r.person_id
+  people AS p
+LEFT OUTER JOIN reports AS r ON p.person_id = r.person_id
 WHERE content IS NULL;
